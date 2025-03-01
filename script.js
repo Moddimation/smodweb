@@ -1,4 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+
     const container = document.querySelector(".container");
     const bgImg = document.querySelector(".bgImg");
     container.style.opacity = "1"; // Fade in content
