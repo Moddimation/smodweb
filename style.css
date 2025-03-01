@@ -2,14 +2,22 @@ html {
     overflow-x: hidden; /* Disable horizontal scrolling */
     overflow-y: auto;   /* Enable vertical scrolling */
     height: 100%;
+    background: black; /* Prevent white flash */
+}
+body {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
 }
 
-html, body {
+.container {
     margin: 0;
     padding: 0;
     height: 100%; /* Ensure content can extend beyond the viewport */
     width: 100vw;
-    background: black; /* Prevent white flash */
+    top: 40px;
+    position: relative;
+    z-index: 1;
+    color: white; /* Ensure text is visible */
 }
 
 .bgImg {
@@ -25,24 +33,31 @@ html, body {
     transition: background-image 0.2s ease-in-out; /* Smooth transition when switching images */
 }
 
-
+/* Apply blur effect to entire viewport including the edges */
 .bgImg::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Make sure it covers the entire viewport */
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    height: 100vh;
     background: inherit; /* Inherit background properties */
     filter: blur(3px); /* Apply blur effect */
     z-index: -1; /* Ensure it stays behind the content */
 }
 
-.container {
-    position: relative;
-    z-index: 1;
-    color: white; /* Ensure text is visible */
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+.bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 3px solid #111155CC;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 40px;
+  position: fixed; /* Make sure it stays fixed at the top */
+  color: #FFFFFF; /* Ensure text is visible */
+  background-color: #FF003369;
 }
 

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".container");
     const bgImg = document.querySelector(".bgImg");
-    container.style.opacity = "1"; // Fade in content
+    document.querySelector("body").style.opacity = "1"; // Fade in content
 
     const totalImages = 13;  // Total number of images
     let isScrolling = false;  // To control when to update the background image
