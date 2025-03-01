@@ -12,7 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const switchEvery = totalScrollableHeight / totalImages; // Distance to scroll to switch images
 
         const scrollPos = window.scrollY; // Current scroll position
-        const imgIndex = Math.min(Math.floor(scrollPos / switchEvery), totalImages - 1); // Determine the current image index
+        let imgIndex = Math.floor(scrollPos / switchEvery); // Determine the current image index
+
+        // Clamp the imgIndex to the range [0, totalImages-1]
+        imgIndex = Math.max(0, Math.min(imgIndex, totalImages - 1));
 
         // Build the image URL string dynamically based on the scroll position
         const imagePath = `assets/bg/bg${imgIndex}.png`;
