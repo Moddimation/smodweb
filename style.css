@@ -36,10 +36,11 @@ body {
     padding: 0;
     height: 100%; /* Ensure content can extend beyond the viewport */
     width: 100vw;
-    top: 50px;
+    top: 60px;
     position: relative;
     z-index: 1;
     color: white; /* Ensure text is visible */
+    font-family: 'MessageFont';
 }
 
 .bgImg {
@@ -64,7 +65,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: inherit; /* Inherit background properties */
-    filter: blur(3px); /* Apply blur effect */
+    filter: blur(2px); /* Apply blur effect */
     z-index: -1; /* Ensure it stays behind the content */
 }
 
@@ -79,8 +80,8 @@ body {
   width: 100vw;
   height: 50px;
   position: fixed; /* Make sure it stays fixed at the top */
-  color: #FFFFFF; /* Ensure text is visible */
-  background-color: #FF003369;
+  color: #DDDDDD; /* Ensure text is visible */
+  background-color: #AA1133;
 }
 
 #barTitle {
@@ -88,17 +89,17 @@ body {
   text-decoration: none;
   margin-left: 10px;
   margin-right: 9px;
-  font-size:26px;
+  font-size: 25px;
   font-family: 'HeadFont';
 }
 
 button {
   padding: 3px;
-  width: 190px;
+  width: 130px;
   border-radius: 6px;
   margin-left: 15px;
   margin-top: 3px;
-  background-color: #110088AA;
+  background-color: #000088EE;
   color: #FFFFFF;
   font-size:22px;
   font-family: 'TitleFont';
@@ -106,5 +107,11 @@ button {
 
 button:hover {
   margin-top: 6px;
-  background-color: #2200DDFF;
+  background-color: #3300EEFF;
+}
+
+p {
+  font-size: 24px;
+  margin: 3px;
+  padding-left: 10px;
 }
